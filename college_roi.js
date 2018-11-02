@@ -8,8 +8,32 @@ document.querySelector('.btn-calculate').addEventListener('click', function() {
   preCollegeSalary = document.querySelector('.pre-college-salary').value;
 
   if ( universityInput && majorInput && financialAidInput && preCollegeSalary ) {
-    console.log('Good job!');
+    collegeTuition();
+    majorSalary();
   } else {
     console.log('Please input all values!');
   };
 });
+
+function collegeTuition() {
+  if ( universityInput === 'Harvard' ) {
+    collegeTotalCost = (67580 * 4);
+    console.log('Harvard');
+  } else if ( universityInput === 'Utah' ) {
+    collegeTotalCost = (23613 * 4);
+  } else if ( universityInput === 'NYU' ) {
+    collegeTotalCost = (71000 * 4);
+  } else if ( universityInput === 'Washington' ) {
+    collegeTotalCost = (26595 * 4);
+  } else if ( universityInput === 'Boise State' ) {
+    collegeTotalCost = (21932 * 4);
+  } else if ( universityInput === 'BYU' ) {
+    collegeTotalCost = (18060 * 4);
+  } else {
+    console.log('Please enter a listed university!');
+  }
+};
+
+function majorSalary() {
+  console.log('salary!');
+};
