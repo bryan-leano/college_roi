@@ -8,17 +8,15 @@ document.querySelector('.btn-calculate').addEventListener('click', function() {
   preCollegeSalary = document.querySelector('.pre-college-salary').value;
 
   if ( universityInput && majorInput && financialAidInput && preCollegeSalary ) {
-    collegeTuition();
-    majorSalary();
+    collegeTuitionAndMajorSalary();
   } else {
     console.log('Please input all values!');
   };
 });
 
-function collegeTuition() {
+function collegeTuitionAndMajorSalary() {
   if ( universityInput === 'Harvard' ) {
     collegeTotalCost = (67580 * 4);
-    
   } else if ( universityInput === 'Utah' ) {
     collegeTotalCost = (23613 * 4);
   } else if ( universityInput === 'NYU' ) {
@@ -32,9 +30,7 @@ function collegeTuition() {
   } else {
     console.log('Please enter a listed university!');
   }
-};
 
-function majorSalary() {
   if ( majorInput === 'Computer Science' ) {
     postCollegeSalary = 103160;
   } else if ( majorInput === 'Economics' ) {
@@ -50,4 +46,9 @@ function majorSalary() {
   } else {
     console.log('Please enter a listed major!');
   }
+
+  console.log(collegeTotalCost);
+  console.log(postCollegeSalary);
+
 };
+
