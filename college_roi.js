@@ -45,7 +45,7 @@ function collegeTuitionAndMajorSalary() {
     postCollegeSalary = 35000;
   } else {
     console.log('Please enter a listed major!');
-  }
+  };
 
   roi();
 };
@@ -59,6 +59,12 @@ function roi() {
   extraYearsToEarnBack = extraOpportunityCost / postCollegeSalary;
   totalRoiYears = yearsToEarnBack + extraYearsToEarnBack;
 
-  console.log(totalRoiYears);
+  if ( totalRoiYears <= 5 ) {
+    console.log('Go to college!');
+  } else if ( totalRoiYears > 6 && totalRoiYears < 10) {
+    console.log('Up to you');
+  } else {
+    console.log('Do not go to college!');
+  };
   
 };
