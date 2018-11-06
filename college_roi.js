@@ -47,8 +47,18 @@ function collegeTuitionAndMajorSalary() {
     console.log('Please enter a listed major!');
   }
 
-  console.log(collegeTotalCost);
-  console.log(postCollegeSalary);
-
+  roi();
 };
 
+function roi() {
+  collegeTotalCost = collegeTotalCost - financialAidInput;
+  opportunityCost = preCollegeSalary * 4;
+  collegeTotalCost = collegeTotalCost + opportunityCost;
+  yearsToEarnBack = collegeTotalCost / postCollegeSalary;
+  extraOpportunityCost = yearsToEarnBack * preCollegeSalary;
+  extraYearsToEarnBack = extraOpportunityCost / postCollegeSalary;
+  totalRoiYears = yearsToEarnBack + extraYearsToEarnBack;
+
+  console.log(totalRoiYears);
+  
+};
